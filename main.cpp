@@ -15,28 +15,15 @@ int main()
 	
 	Result = 10 > 2;
 
-	cout << Result << endl;
+	// cout << Result << endl;
 
-	// for (;;)
-	// {
-	// }
+	int con = 0;
 
-	int Score = 0;
-
-	cin >> Score;
-
-	if ( Score >= 80 && Score < 90)
+	for (int i = 0; i <= 100; i++)
 	{
-		cout << "B" << endl;
+		cout << i << endl;
+		con +=  i;
 	}
-	else if (Score >= 90 && Score < 100)
-	{
-		cout << "A" << endl;
-	}
-	
-
-
-	cout << Korean[0] << endl;
-
+	cout << con << endl;
 	return 0;
 }
