@@ -2,28 +2,64 @@
 
 using namespace std;
 
+
+
 int main()
 {
-	int Korean[10] = { 0,};
-	
-	// >, <, ==, >=, <=,!=  
-	// and &&
-	//or ||
-	
-	bool Result = true;
-	Result = false;
-	
-	Result = 10 > 2;
+	//1 == ¨¬¢ç
+	int Map[10][10] = {
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 1, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 1, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 2, 1 },
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+	};
 
-	// cout << Result << endl;
+	bool Running = true;
 
-	int con = 0;
-
-	for (int i = 0; i <= 100; i++)
+	while (Running)
 	{
-		cout << i << endl;
-		con +=  i;
+		//Input()
+		char Direction = 'W';
+		cin >> Direction;
+
+		//Process();
+		if (Direction == 'Q')
+		{
+			Running = false;
+		}
+
+		//Render()
+		system("cls");
+		for (int Y = 0; Y < 10; ++Y)
+		{
+			for (int X = 0; X < 10; ++X)
+			{
+				if (Map[Y][X] == 1)
+				{
+					cout << '=' << ' ';
+				}
+				else if (Map[Y][X] == 0)
+				{
+					cout << ' ' << ' ';
+				}
+				else if (Map[Y][X] == 2)
+				{
+					cout << 'G' << ' ';
+				}
+			}
+			cout << '\n';
+		}
 	}
-	cout << con << endl;
+
+
+
+
+
 	return 0;
 }
